@@ -16,9 +16,8 @@ import nltk  #자연어 처리 모듈
 from nltk.corpus import names
 nltk.download('names')
  ```
- ![zero](/images/zero.png)
 
- ### 1. 첫 글자, 마지막 글자를 반환함
+### 1. 첫 글자, 마지막 글자를 반환함
  
 ```python
  def gender_feature(word):
@@ -65,8 +64,6 @@ print(model.classify(gender_feature('Trinity')))
 print(model.classify(gender_feature('jane')))
 ```
 
- ![one](/images/one.png)
-
 > * 테스트 세트를 이용하여 나이브 베이즈 분류기의 정확도를 확인(약 80프로의 정확성을 보인다.)
 
 ```python
@@ -74,11 +71,7 @@ print(nltk.classify.accuracy(model, test_set))
 print(nltk.classify.accuracy(model1, test_set))
 ```
 
- ![two](/images/two.png)
-
 > * 마지막으로 show_most_informative_features() 함수를 사용하면 이름의 성별을 구별하는 기준을 확인할 수 있음
 ```python
 print(model.show_most_informative_features())
 ```
-
- ![three](/images/three.png)
