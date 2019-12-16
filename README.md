@@ -17,6 +17,8 @@ from nltk.corpus import names
 nltk.download('names')
  ```
 
+<img width="321"  src="https://user-images.githubusercontent.com/37105402/70911272-e2a49500-2054-11ea-9477-76ccd4717196.PNG">
+
 ### 1. 첫 글자, 마지막 글자를 반환함
  
 ```python
@@ -25,8 +27,6 @@ nltk.download('names')
              [('last_letter', word[-1]), ('first_letter', word[0])]
     return dict(bigram)
 ```
-<img width="321"  src="https://user-images.githubusercontent.com/37105402/70911272-e2a49500-2054-11ea-9477-76ccd4717196.PNG">
-
 
 ### 2. 학습 데이터 준비
 
