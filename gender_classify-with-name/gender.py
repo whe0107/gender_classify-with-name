@@ -26,8 +26,8 @@ if __name__ == "__main__":
 featuresets = [(gender_feature(n), g) for (n, g) in names]
 train_set, test_set = featuresets[900:], featuresets[:900]
 
-model = nltk.classify.NaiveBayesClassifier.train(train_set)
-
+model = nltk.classify.NaiveBayesClassifier.train(train_set) #나이즈베이즈
+model1 = nltk.classify.DecisionTreeClassifier.train(train_set) # 의사결정트리
 ##4단계 테스트 하기 약 80%~83%
 #학습 데이터에 없는 이름을 가지고 테스트. Neo는 남성, Trinity와 Jane은 여성이라는 결과가 나옴
 print(model.classify(gender_feature('Neo')))
@@ -36,8 +36,9 @@ print(model.classify(gender_feature('jane')))
 
 # model = nltk.classify.DecisionTreeClassifier.train(train_set)
 
-#테스트 세트를 이용하여 나이브 베이즈 분류기의 정확도를 확인
+#테스트 세트를 이용하여 정확도를 확인
 print(nltk.classify.accuracy(model, test_set))
+print(nltk.classify.accuracy(model1, test_set))
 
 #마지막으로 show_most_informative_features() 함수를 사용하면 이름의 성별을 구별하는 기준을 확인할 수 있음
 print(model.show_most_informative_features())
