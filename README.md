@@ -25,7 +25,8 @@ nltk.download('names')
              [('last_letter', word[-1]), ('first_letter', word[0])]
     return dict(bigram)
 ```
-![zero](./images/zero.png)
+<img width="321"  src="https://user-images.githubusercontent.com/37105402/70911272-e2a49500-2054-11ea-9477-76ccd4717196.PNG">
+
 
 ### 2. 학습 데이터 준비
 
@@ -64,7 +65,7 @@ print(model.classify(gender_feature('Neo')))
 print(model.classify(gender_feature('Trinity')))
 print(model.classify(gender_feature('jane')))
 ```
-![one](./images/one.png)
+<img width="266" alt="one" src="https://user-images.githubusercontent.com/37105402/70911337-0c5dbc00-2055-11ea-8b47-9395578117e6.PNG">
 
 > * 테스트 세트를 이용하여 나이브 베이즈 분류기의 정확도를 확인(약 80프로의 정확성을 보인다.)
 
@@ -72,10 +73,10 @@ print(model.classify(gender_feature('jane')))
 print(nltk.classify.accuracy(model, test_set))
 print(nltk.classify.accuracy(model1, test_set))
 ```
-![two](./images/two.png)
+<img width="246" alt="two" src="https://user-images.githubusercontent.com/37105402/70911416-37481000-2055-11ea-9a94-de3ad96bf4f7.PNG">
 
 > * 마지막으로 show_most_informative_features() 함수를 사용하면 이름의 성별을 구별하는 기준을 확인할 수 있음
 ```python
 print(model.show_most_informative_features())
 ```
-![three](./images/three.png)
+<img width="404" alt="three" src="https://user-images.githubusercontent.com/37105402/70911453-49c24980-2055-11ea-808f-3991d348e53c.PNG">
