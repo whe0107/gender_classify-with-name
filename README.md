@@ -67,7 +67,7 @@ print(model.classify(gender_feature('jane')))
 ```
 <img width="266" alt="one" src="https://user-images.githubusercontent.com/37105402/70911337-0c5dbc00-2055-11ea-8b47-9395578117e6.PNG">
 
-> * 테스트 세트를 이용하여 나이브 베이즈 분류기의 정확도를 확인(약 80프로의 정확성을 보인다.)
+> * 테스트 세트를 이용하여 정확도를 확인(약 80프로의 정확성을 보인다.)
 
 ```python
 print(nltk.classify.accuracy(model, test_set))
